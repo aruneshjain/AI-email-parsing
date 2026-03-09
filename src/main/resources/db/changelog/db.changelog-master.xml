@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="arunesh">
+        <createTable tableName="orders" schemaName="${schemaName}">
+            <column name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="customer_name" type="VARCHAR(50)"/>
+            <column name="customer_email" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+
+<!--    <changeSet id="1" author="arunesh">-->
+<!--        <sqlFile path="classpath:..sql/create_orders_table.sql" relativeToChangelogFile="false"/>-->
+<!--    </changeSet>-->
+
+<!--    <changeSet id="2" author="arunesh">-->
+<!--        <sqlFile path="classpath:..sql/insert_orders_data.sql" relativeToChangelogFile="false"/>-->
+<!--    </changeSet>-->
+
+</databaseChangeLog>
+
